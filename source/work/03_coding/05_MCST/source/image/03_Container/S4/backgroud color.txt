@@ -1,0 +1,1 @@
+background: #e7f0f9 url(bg_pattern_bottom.png) repeat 0 0;

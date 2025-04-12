@@ -1,0 +1,11 @@
+01 노랑 background-color: rgb(255, 253, 240)
+<div class="swiper-slide swiper-slide-active" data-swiper-autoplay="5000" style="background-color: rgb(255, 253, 240);
+background-image: url(&quot;/kor/images/main/bg_pattern_top_slides.png&quot;); background-repeat: repeat; background-position: 0px 0px; width: 1379px;" data-swiper-slide-index="0">
+
+02 연두 background-color: rgb(248, 254, 241)
+<div class="swiper-slide swiper-slide-active" data-swiper-autoplay="5000" style="background-color: rgb(248, 254, 241);
+background-image: url(&quot;/kor/images/main/bg_pattern_top_slides.png&quot;); background-repeat: repeat; background-position: 0px 0px; width: 1379px;" data-swiper-slide-index="1">
+
+03 보라 background-color: rgb(238, 238, 251)
+<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-autoplay="5000" style="background-color: rgb(238, 238, 251);
+background-image: url(&quot;/kor/images/main/bg_pattern_top_slides.png&quot;); background-repeat: repeat; background-position: 0px 0px; width: 1379px;" data-swiper-slide-index="2">

@@ -1,0 +1,9 @@
+* 멈춤
+<svg class="icon___2Vce9 icon-border___2Z0c-" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-testid="pause-icon">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 14H17V30H19V14ZM27 14H25V30H27V14Z" fill="white"></path>
+</svg>
+
+* 재생
+<svg class="icon___2Vce9 icon-border___2Z0c-" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-testid="play-icon">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 22L16.5 13.3397V30.6603L30 22ZM26.2959 22L18.5 16.9989V27.0011L26.2959 22Z" fill="white"></path>
+</svg>

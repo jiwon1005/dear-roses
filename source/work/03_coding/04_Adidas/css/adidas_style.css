@@ -1,0 +1,1530 @@
+@charset "UTF-8";
+
+
+/* -------------------------------- Font -------------------------------- */
+@font-face {
+    font-family: 'AdihausDIN-Regular';
+    src: url(../source/font/AdihausDIN-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'AdihausDIN-Bold';
+    src: url(../source/font/AdihausDIN-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'AdineuePRO-Bold';
+    src: url(../source/font/AdineuePRO-Bold.woff2) format('woff2');
+}
+
+/* -------------------------------- Default -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 120px;
+    font-family: 'AdihausDIN-Regular', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+    letter-spacing: 0.15rem;
+    color: #000000;
+    overflow-x: hidden !important;
+}
+
+a:visited,
+a:active,
+a:focus,
+a:link,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+.clearfix::after,
+#clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+}
+
+/* -------------------------------- Header -------------------------------- */
+
+header {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #FFFFFF;
+    transition: top 0.3s ease-in-out;
+}
+
+.header-hidden {
+    top: -100px;
+  }
+
+.header_top,
+.header_btm {
+    width: 100%;
+    padding: 0 40px;
+    z-index: 1;
+}
+
+/* ---------------- Header Slide */
+.header_wrapper {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+.header_wrapper ul {
+    height: 100%;
+}
+
+.header_wrapper ul li {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.header_wrapper ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_wrapper ul li a img {
+    width: 16px;
+    height: 20px;
+}
+
+
+
+/* ---------------- Header Top (도움말, 반품, 주문조회, 아디클럽 가입하기) */
+.header_top {
+    height: 32px;
+    background-color: #FFFFFF;
+}
+
+.header_top ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    height: 100%;
+    font-size: 12px;
+    float: right;
+    letter-spacing: normal;
+}
+
+.header_top ul li:last-child {
+    margin-right: 0px;
+}
+
+.header_top ul li:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- Header Bottom (로고, GNB) */
+.header_btm {
+    height: 48px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    height: 46px;
+}
+
+.logo svg {
+    position: absolute;
+    top: 60px;
+}
+
+/* GNB */
+.gnb_wrap {
+    margin: 0 auto;
+}
+
+.gnb_wrap ul li {
+    float: left;
+}
+
+/* GNB 타이틀 (MEN, WOMEN, KIDS ...) */
+.gnb {
+    height: 48px;
+}
+
+.gnb_tit {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 3rem;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.gnb:nth-child(1),
+.gnb:nth-child(2),
+.gnb:nth-child(3),
+.gnb:nth-child(6) {
+    font-family: 'AdihausDIN-Bold';
+}
+
+.gnb_wrap>ul>li:hover {
+    border-bottom: 3px solid #000000;
+}
+
+/* ---------------- LNB */
+
+/* lnb setting */
+.lnb_wrap {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    background-color: #FFFFFF;
+
+    font-family: 'AdihausDIN-Regular';
+    font-weight: 300;
+    letter-spacing: 0;
+    display: none;
+    z-index: 1;
+}
+
+.lnb_top,
+.lnb_btm {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    padding: 0px 12%;
+    box-sizing: border-box;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+    gap: 2%;
+}
+
+.lnb_tit,
+.lnb_tit2,
+.lnb_tit_img {
+    padding: 36px 0px;
+    box-sizing: border-box;
+}
+
+.lnb_btm>li>a,
+.lnb_btm_6p>li>a {
+    padding: 0;
+}
+
+.lnb_tit>a,
+.lnb_tit2>a,
+.lnb_btm {
+    font-weight: 600;
+}
+
+.lnb_tit:first-child,
+.lnb_tit2:first-child,
+.lnb_btm li:first-child {
+    border-right: 1px solid #EEEEEE;
+}
+
+.lnb {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.lnb p {
+    height: 14px;
+}
+
+.lnb_img1 {
+    height: 52px;
+}
+
+.lnb_img1 img {
+    max-width: 130px;
+    max-height: 52px;
+}
+
+.lnb_tit>a:hover,
+.lnb_tit2>a:hover,
+.lnb>li:hover,
+.lnb_btm>li>a:hover,
+.lnb_btm_6p>li>a:hover {
+    text-decoration: underline;
+}
+
+/* SPORTS, BRANDS */
+.lnb_top_6p,
+.lnb_btm_6p {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    padding: 0px 12%;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    /* font-weight: 300; */
+
+}
+
+.lnb_top_6p .lnb_tit:first-child {
+    border-right: 0;
+}
+
+.lnb_tit_img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lnb_img2 img {
+    width: 100%;
+}
+
+/* lnb bottom */
+.lnb_btm,
+.lnb_btm_6p {
+    width: 100%;
+    height: 40px;
+    font-weight: 600;
+    border-top: 1px solid #EEEEEE;
+    justify-content: center;
+}
+
+.lnb_btm li {
+    height: 100%;
+    line-height: 2.5rem;
+}
+
+.lnb_btm_6p {
+    height: 100%;
+    line-height: 2.5rem;
+}
+
+/* ---------------- Sub GNB (Search, User, Wisi, Cart) */
+.gnb_right {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 3px;
+    width: 100%;
+    height: 32px;
+    background-color: #FFFFFF;
+}
+
+/* Search */
+.gnb_search {
+    position: relative;
+    width: 198px;
+    height: 100%;
+    float: left;
+    margin-right: 24px;
+}
+
+.gnb_search input {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    outline: 0;
+    padding: 9px;
+}
+
+input::placeholder {
+    color: #000000
+}
+
+input[type="text"] {
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+
+input[type="text"]:focus {
+    border: solid 1px #727272;
+}
+
+.gnb_search a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    padding: 6px;
+}
+
+.gnb_search a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* User, Wish, Cart */
+.gnb_right ul {
+    display: flex;
+    width: fit-content;
+    gap: 12px;
+    align-items: center;
+    float: right;
+}
+
+.gnb_right ul li {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+}
+
+.gnb_right ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* User Bounce */
+.gnb_right ul li:first-child,
+.gnb_m_right li:first-child {
+    position: relative;
+}
+
+.gnb_right ul li:first-child::after,
+.gnb_m_right li:first-child::after {
+    content: '1';
+    text-align: center;
+    font-family: 'AdihausDIN-Bold';
+    font-size: 12px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: -12px;
+    top: -8px;
+    padding: 5px 0px 1px 2px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background-color: #FFD200;
+
+    /* Bounce */
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+}
+
+/* Bounce Keyframe */
+@-webkit-keyframes bounce {
+
+    0%,
+    10%,
+    30%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    20% {
+        -webkit-transform: translateY(-6px)
+    }
+
+    40% {
+        -webkit-transform: translateY(-3px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    10%,
+    30%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-6px);
+    }
+
+    40% {
+        transform: translateY(-3px);
+    }
+}
+
+/* -------------------------------- GNB (Ver. Mobile) -------------------------------- */
+.header_m {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 9px 12px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+.header_m img {
+    height: 20px;
+}
+
+.logo_m {
+    width: 50px;
+    height: 32px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.gnb_m_left {
+    display: flex;
+    z-index: 1;
+}
+
+.gnb_m_right {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.gnb_m_left li,
+.gnb_m_right li {
+    width: 44x;
+    height: 32px;
+    padding: 6px 12px;
+}
+
+/* -------------------------------- LNB (Ver. Mobile) */
+.lnb_m {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: 2;
+    display: none;
+    overflow-x: hidden;
+}
+
+/* Logo, Close Button */
+.lnb_m_top {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding: 6px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.lnb_logo svg {
+    width: 52px;
+}
+.lnb_m_close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../source/images/01_Header/lnb/close_black.svg);
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* GNB Title */
+.lnb_m_mid, .lnb_m_btm {
+    padding: 36px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.lnb_m_mid ul, .lnb_m_btm ul  {
+    display: flex;
+    flex-direction: column;
+    /* gap: 28px; */
+}
+.lnb_m_mid ul li, .lnb_m_btm ul li {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 0;
+    cursor: pointer;
+}
+.lnb_m_mid ul li:nth-child(4),
+.lnb_m_mid ul li:nth-child(5) {
+    font-weight: 500;
+}
+
+/* - View more */
+.lnb_m_mid ul li img {
+    float: right;
+    width: 14px;
+    transform: rotate(270deg);
+    margin-bottom: 2px;
+    filter: invert();
+}
+
+/* Sub GNB */
+.lnb_m_btm {
+    border-bottom: none;
+}
+.lnb_m_btm ul li {
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Country */
+.lnb_ctr {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #EEEEEE;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-left: 36px;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+.lnb_ctr img {
+    width: 30px;
+    height: 30px;
+}
+
+/* -------------------------------- Main -------------------------------- */
+
+.main_slide {
+    position: relative;
+    width: 100%;
+    height: 45vw;
+}
+
+.main_slide > ul > li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main_slide > ul > li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------------------- Element */
+.main_ctt {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    width: 32%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --------------- Text */
+.main_txt {
+    height: fit-content;
+    padding-bottom: 5px;
+}
+/* ADIZERO ADIOS PRO 3 */
+.main_txt h2 {
+    font-family: 'AdineuePRO-Bold';
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 3rem;
+    letter-spacing: 0rem;
+    color: #FFFFFF;
+}
+
+/* 아디제로의 전설적 스피드에서 ... */
+.main_txt h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 24px 0;
+    letter-spacing: 0rem;
+}
+
+/* 구매하기 */
+.buy_btn_wrap {
+    position: relative;
+    width: 160px;
+    height: 60px;
+    font-weight: 600;
+    line-height: 1rem;
+    white-space: nowrap;
+    padding: 0px 4px 4px 0px;
+}
+
+.buy_btn_bg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 155px;
+    height: 53px;
+    border: 1px solid #FFFFFF;
+}
+
+.buy_btn {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding-top: 4px;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+}
+
+.buy_btn:hover a {
+    transition: all 0.2s ease-in-out;
+    filter: invert(49%) sepia(4%) saturate(5%) hue-rotate(16deg) brightness(89%) contrast(86%);
+}
+
+.buy_btn img {
+    width: 28px;
+}
+.buy_btn a {
+    width: 100%;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease-in-out;
+}
+.buy_btn:active {
+    transform: translate(4px, 4px);
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* ---------------Slide Controller */
+.main_slide_ctrl {
+    cursor: pointer;
+}
+.main_slide_ctrl div {
+    width: 46px;
+    height: 46px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    border: 2px solid #FFFFFF;
+}
+.main_slide_ctrl div svg {
+    padding-right: 2px;
+}
+.stop_btn, .play_btn {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+/* -------------------------------- Container -------------------------------- */
+.product {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 120px 40px 60px 40px;
+}
+
+/* Title */
+.slide_tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product h2 {
+    font-family: 'AdineuePRO-Bold';
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 3rem;
+}
+
+.slide_ctrl {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Product More */
+.prdt_more {
+    height: fit-content;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 1rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.prdt_more:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: unset;
+}
+
+/* Slide Controller */
+.slide_prev, .slide_next {
+    cursor: pointer;
+    padding: 12px;
+    transition: all 0.1s ease-in-out;
+}
+.slide_ctrl button {
+    border: none;
+    background-color: #FFFFFF;
+    width: 42px;
+    height: 42px;
+}
+.slide_ctrl button:hover {
+    filter: invert();
+    transition: all 0.1s ease-in-out;
+}
+
+/* Slide Setting */
+.slide_wrap {
+    margin-top: 36px;
+    height: 360px;
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+.prdt_list {
+    height: fit-content;
+    border: 1px solid transparent;
+    flex: 0 0 280px;
+}
+
+
+
+/* Image, Wish, Price */
+.prdt_top {
+    position: relative;
+    width: 100%;
+    letter-spacing: 0;
+}
+
+.prdt_top img {
+    width: 100%;
+}
+.prdt_prc, .prdt_sale {
+    position: absolute;
+    left: 8px;
+    background-color: #FFFFFF;
+    padding: 3px 6px;
+    transition: 0.2s;
+}
+
+/* - Sale % */
+.prdt_sale {
+    bottom: 28px;
+    font-weight: bold;
+}
+
+/* - Price */
+.prdt_prc {
+    bottom: 0;
+}
+.prdt_sale_b  {
+    color: #727272;
+    text-decoration: line-through;
+    margin-right: 6px;
+}
+.prdt_sale_a {
+    color: #E32B2B;
+}
+
+/* - Wishlist */
+.prdt_ws {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    right: 10px;
+    cursor: default;
+    background-image: url(../source/images/03_Container/wish.png);
+    background-size: cover;
+}
+.on {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    right: 10px;
+    cursor: default;
+    background-image: url(../source/images/03_Container/wish_on.png);
+    background-size: cover;
+    /* z-index: 1; */
+}
+
+/* Product Name, Product Catalog */
+.prdt_btm {
+    padding: 12px 12px 24px 12px;
+    box-sizing: border-box;
+    letter-spacing: 0;
+}
+.prdt_ctg {
+    margin: 6px 0;
+    color: #767676;
+}
+.prdt_new {
+    height: 14px;
+}
+
+/* Product Hover */
+.product a:hover .prdt_prc,
+.product a:hover .prdt_sale {
+    transform: translateY(-10px);
+    transition: 0.2s;
+}
+.prdt_list:hover  {
+    border: 1px solid #000000;
+}
+
+/* -------------------------------- Trend */
+.trd .slide_wrap, .bst .slide_wrap {
+    /* 280px */
+    width: 3536px;
+    transition: all 0.2s linear;
+}
+
+/* -------------------------------- Picnic */
+.pcn {
+    padding: 120px 40px;
+}
+.pcn h2 {
+    margin-bottom: 12px;
+}
+.pcn strong {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0rem;
+}
+
+.pcn .slide_wrap {
+    /* 280px */
+    width: 5160px;
+    transition: all 0.2s linear;
+}
+
+/* -------------------------------- promotion ------------------------------- */
+.promotion {
+    width: 100%;
+    height: fit-content;
+    padding: 0 40px;
+}
+.promotion ul {
+    width: 100%;
+    /* height: 560px; */
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.promotion ul li {
+    width: 100%;
+}
+.prmt_img img,  .prmt_img video {
+    width: 100%;
+}
+
+/* text */
+.prmt_txt {
+    padding: 24px 0;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    letter-spacing: 0.1rem;
+}
+
+.prmt_caption h3 {
+    font-size: 16px;
+    font-family: 'AdihausDIN-Bold';
+    line-height: 1.3rem;
+    margin-bottom: 8px;
+}
+.buy_now {
+    width: fit-content;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.1s ease-in-out;
+}
+
+.buy_now:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: unset;
+    transition: all 0.1s ease-in-out;
+}
+
+
+/* -------------------------------- Brand -------------------------------- */
+.brand {
+    background-color: #F5F5E5;
+    padding: 80px 40px;
+    display: flex;
+    gap: 60px;
+    letter-spacing: 0;
+}
+
+.brand h2 {
+    font-family: 'AdihausDIN-Bold';
+    font-size: 40px;
+    line-height: 2.8rem;
+    /* background-color: pink; */
+    margin-bottom: 36px;
+}
+
+.brand p {
+    font-size: 16px;
+    line-height: 1.6rem;
+    word-break: keep-all;
+}
+
+/* -------------------------------- Bottom GNB (Ver. Mobile) ------------------------------- */
+.btm_gnb {
+    display: none;
+    cursor: pointer;
+}
+
+.btm_gnb_wrap {
+    margin: 40px 0;
+}
+
+.btm_gnb_tit a {
+    padding: 20px;
+}
+
+.btm_gnb_tit {
+    font-family: 'AdihausDIN-Bold';
+    font-size: 24px;
+    line-height: 3rem;
+}
+.btm_gnb_tit > a {
+    line-height: 3.6rem;
+}
+.btm_gnb_tit:nth-child(4),
+.btm_gnb_tit:nth-child(5) {
+    font-family: 'AdihausDIN-Regular';
+}
+
+.btm_gnb_tit > a img {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-top: 18px;
+    margin-right: 20px;
+}
+
+.btm_lnb {
+    font-family: 'AdihausDIN-Regular';
+    font-size: 16px;
+    letter-spacing: 0;
+    background-color: #FFFFFF;
+    display: none;
+}
+.btm_lnb li {
+    border-bottom: 1px solid #EEEEEE;
+}
+.btm_lnb li:last-child {
+    border: none;
+}
+
+
+/* -------------------------------- Footer -------------------------------- */
+
+.footer {
+    padding-top: 40px;
+}
+
+.footer_menu {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_menu_wrap {
+    width: 100%;
+    /* background-color: pink; */
+    display: grid;
+    grid: '. . . . . .';
+    gap: 12px;
+}
+
+.footer_tit h5 {
+    font-family: 'AdineuePRO-Bold';
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.footer_tit ul li {
+    /* border: 1px solid red; */
+    padding: 4px 0;
+    letter-spacing: 0;
+}
+
+.footer_tit ul li:hover {
+    text-decoration: underline;
+}
+
+.footer_tit ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+.info {
+    margin-top: 36px;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+    word-break: keep-all;
+}
+
+/* legal */
+.legal {
+    background-color: #282C31;
+    color: #EEEEEE;
+    font-size: 12px;
+    letter-spacing: 0;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+.legal ul {
+    margin: 0 auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+}
+.legal ul li a {
+    padding: 0 12px;
+    border-right: 1px solid #EEEEEE;
+}
+.legal ul li:nth-child(3) {
+    font-weight: 600;
+}
+.legal > ul > li:last-child > a {
+    border-right: none;
+}
+
+/* -------------------------------- Footer (Ver. Mobile) -------------------------------- */
+.footer_m {
+    display: none;
+}
+
+/* Feedback */
+.feedback_m {
+    background-color: #EEEEEE;
+    padding: 40px 20px;
+}
+
+.feedback_m h4 {
+    font-size: 18px;
+    letter-spacing: 0;
+}
+.feedback_m p {
+    font-size: 16px;
+    margin-top: 12px;
+    letter-spacing: 0;
+}
+
+/* BACK TO TOP */
+.scroll_top {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: default;
+    letter-spacing: 0;
+}
+.scroll_top img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Account */
+.account_m ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px 0px;
+    background-color: #000000;
+    font-family: 'AdineuePRO-Bold';
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+/* Membership */
+.membership {
+    padding: 40px;
+    background-color: #EDE734;
+    text-align: center;
+}
+.membership h2 {
+    font-family: 'AdineuePRO-Bold';
+    font-size: 30px;
+    line-height: 2.4rem;
+    margin-bottom: 24px;
+    word-break: keep-all;
+}
+.membership strong {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+
+
+/* 회원가입 Button */
+.join_btn_wrap {
+    position: relative;
+    width: 160px;
+    height: 60px;
+    font-weight: 600;
+    line-height: 1.3rem;
+    white-space: nowrap;
+    color: #FFFFFF;
+    padding: 0px 4px 4px 0px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.join_btn_bg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 154px;
+    height: 56px;
+    border: 1px solid #000000;
+}
+
+.join_btn {
+    box-sizing: border-box;
+    background-color: #000000;
+    padding-top: 4px;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+}
+
+.join_btn:hover a {
+    transition: all 0.2s ease-in-out;
+    filter: invert(49%) sepia(4%) saturate(5%) hue-rotate(16deg) brightness(89%) contrast(86%);
+}
+
+.join_btn img {
+    width: 28px;
+    filter: invert();
+}
+.join_btn a {
+    width: 100%;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease-in-out;
+}
+.join_btn:active {
+    transform: translate(4px, 4px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Footer menu */
+.footer_menu_m {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.footer_menu_m ul {
+    display: grid;
+    grid: '. .';
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0;
+    padding-top: 20px;
+}
+.footer_menu_m ul li {
+    padding: 12px 0;
+}
+
+.info_m {
+    padding: 20px;
+    background-color: #000000;
+    word-break: keep-all;
+    color: #FFFFFF;
+    border-bottom: 1px solid #767676;
+    letter-spacing: 0;
+}
+
+.legal_m {
+    background-color: #282C31;
+    padding: 20px 0;
+}
+.legal_m ul {
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #EEEEEE;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.legal_m ul li {
+    padding: 12px 0;
+}
+.legal_m ul li:nth-child(3) {
+    font-weight: 600;
+}
+.legal_m ul li:last-child {
+    grid-column-end: span 2;
+}
+
+.copy {
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #EEEEEE;
+    text-align: center;
+    padding-top: 24px;
+}
+
+/* -------------------------------- Media Querise -------------------------------- */
+
+@media screen and (max-width: 1280px) {
+
+    /* -------------- Header -------------- */
+    .header_btm {
+        grid-template-columns: 1fr 3fr 1.5fr;
+    }
+
+    .header_top,
+    .header_btm {
+        padding: 0 20px;
+    }
+
+    .gnb_wrap {
+        margin: 0;
+    }
+
+    .lnb,
+    .lnb_btm,
+    .lnb_btm_6p {
+        font-size: 12px;
+    }
+
+    .lnb p {
+        height: 12px;
+    }
+
+    .lnb_top,
+    .lnb_btm,
+    .lnb_top_6p,
+    .lnb_btm_6p {
+        padding: 0 20px;
+    }
+
+    .lnb_tit:first-child,
+    .lnb_btm li:first-child {
+        border-right: none;
+    }
+
+    /* -------------- Main -------------- */
+    .main_ctt {
+        height: 70%;
+        left: 20px;
+        bottom: 20px;
+    }
+    /* -------------- Container -------------- */
+
+    /* brand */
+    .brand h2 {
+        font-size: 36px;
+        line-height: 2.4rem;
+    }
+
+    /* Footer */
+    .footer_menu {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    /* -------------- Header -------------- */
+    .header_btm {
+        grid-template-columns: 0.5fr 3fr 1.5fr;
+    }
+
+    .gnb_tit {
+        font-size: 12px;
+    }
+
+    .gnb_search {
+        width: 120px;
+    }
+
+    /* -------------- Container -------------- */
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        padding-top: 100px;
+    }
+
+    /* Header */
+    .header_wrapper ul img {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    .header_m {
+        display: grid;
+    }
+
+    .header_btm,
+    .header_top {
+        display: none;
+    }
+
+    .gnb_right ul li:first-child::after,
+    .gnb_m_right li:first-child::after {
+        right: -8px;
+    }
+
+    /* -------------- main -------------- */
+    .main_slide {
+        height: 100vh;
+    }
+    .main_slide > ul > li > img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .main_ctt {
+        bottom: 25%;
+        width: 50%;
+        justify-content: flex-end;
+        gap: 48px;
+    }
+    .main_txt h2 {
+        font-size: 30px;
+    }
+    .main_txt h3 {
+        margin: 12px 0;
+    }
+
+    /* -------------- Container -------------- */
+    .product {
+        padding: 80px 20px;
+    }
+    .prdt_more {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+    .slide_wrap {
+        margin-top: 24px;
+        height: 320px;
+    }
+
+    /* Trend, Best */
+    .trd .slide_wrap, .bst .slide_wrap {
+        /* 220px */
+        width: 2816px;
+        transition: all 0.2s linear;
+    }
+
+    /* Picnic */
+    .pcn h2 {
+        margin: 0;
+    }
+    .pcn .slide_wrap {
+        /* 220px */
+        width: 3996px;
+        transition: all 0.2s linear;
+    }
+
+    /* Promotion */
+    .promotion {
+        padding: 80px 20px;
+    }
+    .promotion ul {
+        width: 920px;
+    }
+
+    /* Best */
+    .bst {
+        padding: 20px 20px 40px 20px;
+    }
+
+    /* Bottom GNB (Ver. Mobile) */
+    .btm_gnb {
+        display: block;
+    }
+
+    /* Brand */
+    .brand {
+        padding: 80px 20px;
+        flex-direction: column;
+    }
+    
+    .brand h2 {
+        margin-bottom: 24px;
+    }
+    
+    .brand p {
+        line-height: 1.4rem;
+    }
+
+    /* Membership */
+    .membership {
+        display: none;
+    }
+    .footer_m .membership {
+        display: block;
+    }
+
+    /* -------------- Footer -------------- */
+    .footer {
+        display: none;
+    }
+
+    .footer_m {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .main_ctt {
+        width: 360px;
+    }
+    .slide_tit {
+        width: 670px;
+    }
+}
